@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Newsletter Sign Up</title>
+        
+        <link rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+        crossorigin="anonymous">
+
+        <style>
+            ul {
+                list-style: none;
+            }
+        </style>
+        
+        <script type="text/javascript">
+            function submitInfo() {
+    
+                var person = {
+                    "Name" : document.getElementById("form_name").value,
+                    "Email" : document.getElementById("form_email").value
+                };
+    
+                console.log(person);
+                alert(person.Name + " has been added to our newsletter subscription!");
+            }
+
+            function submitSurvey() {
+                var soda = document.getElementById("survey").value;
+                alert("Thank you for voting " + soda + " as your favorite!");
+            }
+    
+        </script>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row bg-danger text-white">
+                <div class="col-6">
+                    <form>
+                        
+                        <fieldset id="name_field">
+                            <legend>Enter Your Name and Email</legend>
+                            <ul>
+                                <li><label for="name">Name:</label><input type="text" id="form_name"></li>
+                                <li><label for="email">Email:</label><input type="email" id="form_email"></li>
+                                <li> <input type="button" value="Submit Info" onclick="submitInfo()"></li>
+                            </ul>
+                        </fieldset>
+                        
+                    </form>
+                </div>
+                    
+
+                        <div class="col-6">
+                            <form>
+                                <fieldset id="survey_field">
+                                    <legend>Survey Question</legend>
+                                    <label for="survey">Select Your Favorite Coca-Cola Product: </label>
+                                        <select id="survey">
+                                            <option>Coca-Cola</option>
+                                            <option>Diet Coke</option>
+                                            <option>Coke Zero</option>
+                                            <option>Sprite</option>
+                                            <option>Dr. Pepper</option>
+                                            
+                                        </select>
+                                        <input type="button" value="Submit Survey" onclick="submitSurvey()">
+                                </fieldset>
+                            </form>
+                            
+                        </div>
+                   
+                
+                
+               
+            </div>
+           
+        </div>
+        
+    </body>
+
+ 
+</html>
